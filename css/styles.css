@@ -97,10 +97,8 @@ footer {
     background-size: cover;
 }
 
-
-
 strong {
-    color: #164237; /* Highlight your name */
+    color: #333; /* Highlight your name */
 }
 
 em {
@@ -116,7 +114,13 @@ em {
 
 #profile h1 {
     color: #470404;
-    font-size: 35px
+    font-size: 48px;
+    margin-bottom: 1%;
+}
+
+#profile h3 {
+    color: #470404;
+    font-size: 20px
 }
 
 #home h2 {
@@ -131,9 +135,9 @@ em {
 #home p {
     font-size: 15px; /* Increase the font size for the paragraph */
     color: #333; /* Darker color for the text */
-    text-align: justify; /* Justify text for clean alignment */
     padding: 2px 60px; /* Add padding on the top and bottom as 10px, left and right as 30px */
-    margin-bottom: 18px; /* Add some space below each paragraph */
+    margin-bottom: 1%; /* Add some space below each paragraph */
+    text-align: justify;
 }
 
 
@@ -159,41 +163,20 @@ body, html {
     color: #6f0303; /* Change color on hover */
 }
 
-.sankey {
-    display: block; /* Make the image a block element to control margins */
-    max-width: 55%; /* Ensure the image scales to 55% of its container's width */
-    height: auto; /* Maintain the aspect ratio */
-    margin: 20px auto; /* Center the image and add top/bottom margin */
-}
-
-/* Media query for very small screens */
-@media (max-width: 600px) {
-    .sankey {
-        max-width: 90%; /* Increase max-width to make the image larger on small screens */
-    }
-}
-
-/* Media query for large screens */
-@media (min-width: 1200px) {
-    .sankey {
-        max-width: 45%; /* Decrease max-width to make the image smaller on very large screens */
-    }
-}
-
 #projects {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around; /* Space out the project boxes */
-    padding: 20px;
+    padding: 1%;
 }
 
 .project-box {
-    background-color: #f6f6f6; /* Light background for the project box */
+    background-color: #ffffff; /* Light background for the project box */
     border-radius: 15px; /* Rounded corners */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    padding: 20px;
-    margin: 20px;
-    max-width: 45%; /* Ensure two projects fit side by side on larger screens */
+    padding: 30px;
+    margin: 5px;
+    max-width: 51%; /* Ensure two projects fit side by side on larger screens */
     flex-grow: 1;
 }
 
@@ -206,11 +189,11 @@ body, html {
     }
 }
 
-
 .project-box h2 {
     color: #470404; /* Custom color for the heading */
     font-size: 22px;
-    margin-bottom: 15px;
+    margin-top: 0px;
+    margin-bottom: 10px;
 }
 
 .project-box p {
@@ -231,7 +214,7 @@ body, html {
 
 .project-box ul li a {
     text-decoration: none;
-    color: #470404;
+    color: #7b0707;
     font-size: 13px;
 }
 
@@ -240,11 +223,14 @@ body, html {
 }
 
 .project-image {
-    max-width: 100%; /* Make sure the image scales */
+    display: block; /* Ensures the image is treated as a block-level element */
+    max-width: 70%; /* Make sure the image scales */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Rounded corners for images */
-    margin-top: 15px;
+    margin-top: 25px;
+    margin-left: auto; /* Automatic margin on the left */
+    margin-right: auto; /* Automatic margin on the right */
 }
+
 
 #teaching {
     max-width: 800px;
@@ -261,7 +247,6 @@ body, html {
 }
 
 
-
 .teaching-entry h2 {
     color: #470404;
     margin-bottom: 10px;
@@ -274,6 +259,98 @@ body, html {
     line-height: 1.6;
 }
 
+#recent-news {
+    width: 100%;
+    margin: 40px auto;
+}
+
+.news-entry {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    max-width: 1000px;
+    padding: 2px 60px; /* Add padding on the top and bottom as 10px, left and right as 30px */
+    padding-left: 1%;
+
+}
+
+.date, .description {
+    flex: 1;
+
+}
+
+.date {
+    margin-right: 20px;  /* Keeps a margin on the right side outside the date container */
+    position: relative;
+    padding-right: 5px; /* Reduced padding to bring text closer to the dotted line */
+}
+
+
+.date::after {
+    content: "";
+    position: absolute;
+    right: -20px; /* Slightly shift the line to the left */
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-image: linear-gradient(to bottom, #b3b1b1 50%, transparent 50%);
+    background-size: 2px 10px;
+}
+
+
+.description ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.description li {
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+h2, .date p, .description {
+    font-size: 20px; /* Adjust font size for better readability */
+    color: #333;
+}
+
+.description ul li {
+    font-size: 16px; /* Ensures text is legibly sized */
+    color: #333; /* Sets a standard text color */
+    padding: 5px 0; /* Adds vertical space around each list item */
+}
+
+.description {
+    padding-left: 20px; /* Add padding to separate text from the line */
+    overflow-wrap: break-word;  /* Allows words to break and wrap to the next line */
+
+}
+
+.date p b {
+    font-size: 18px; /* Ensures text is legibly sized */
+    color: #333; /* Sets a standard text color */
+    padding: 5px 0; /* Adds vertical space around each list item */
+}
+
+.description ul li a {
+    color: #7b0707; /* Sets a distinct color for the links */
+    text-decoration: none; /* Removes underline from unhovered links */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.description ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+#home p a {
+    text-decoration: none;
+    color: #7b0707;
+}
+
+#home p a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
 
 
 
