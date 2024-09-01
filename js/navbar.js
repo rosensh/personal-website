@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var navbarHTML = `
         <nav class="navbar">
             <ul class="nav-links">
-                <li><a href="main.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="research.html">Research</a></li>
                 <li><a href="teaching.html">Teaching</a></li>
                 <li><a href="docs/RoseNiousha_CV.pdf">CV</a></li>
