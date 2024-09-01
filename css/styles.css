@@ -1,0 +1,284 @@
+/* styles.css */
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    overflow-y: auto; /* Allows vertical scrolling */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    height: 100%; /* Ensures the content can take full height */
+    
+
+}
+
+header {
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center; /* Center-align the navbar items if desired */
+
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+    margin-right: 20px; /* Increase margin to space out the items more */
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 200px 30px; /* Add padding to increase the clickable area */
+
+}
+
+nav ul li a:hover {
+    color: #470404; /* Color changes to blue when hovered */
+}
+
+main {
+    margin: 20px;
+}
+
+footer {
+    background-color: #470404;
+    text-align: center;
+    padding: 1px 5px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    margin: 0;
+    z-index: 1000;
+    font-size: 12px;
+    color:#ffffff
+}
+
+
+.profile-pic {
+    width: 300px;       /* or any size you prefer */
+    height: 300px;      /* must be the same as width to maintain aspect ratio */
+    border-radius: 50%; /* makes the image round */
+    border: 3px solid #6e0606; /* optional: adds a white border around the image */
+    object-fit: cover;  /* ensures the image covers the area without being distorted */
+    display: block;
+    margin: 60px auto 0 auto; /* Adds a 20px margin at the top, centers horizontally */
+}
+
+@media (max-width: 600px) {
+    nav ul li {
+        display: block; /* Stack the navbar items vertically */
+        margin-right: 0; /* Remove horizontal margin */
+        text-align: center; /* Ensure text is centered */
+    }
+
+    nav ul li a {
+        display: block; /* Make links block to fill horizontal space */
+        padding: 12px 20px; /* Larger padding for easier tapping */
+    }
+
+    /* Adjust other elements as necessary */
+    body {
+        font-size: 16px; /* Larger font size for readability on small screens */
+    }
+}
+
+.parallax {
+    background-image: url('your-image.jpg');
+    height: 400px; /* Adjust to fit your content */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+strong {
+    color: #164237; /* Highlight your name */
+}
+
+em {
+    font-style: italic;
+    color: #555;
+}
+
+#home {
+    max-width: 900px; /* Limit the width of the section */
+    margin: 10px auto; /* Center the section and add top/bottom margin */
+    line-height: 1.6; /* Increase line spacing for better readability */
+}
+
+#profile h1 {
+    color: #470404;
+    font-size: 35px
+}
+
+#home h2 {
+    font-size: 25px; /* Larger font size for the heading */
+    color: #470404; /* Custom color for the heading */
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 5px 60px; /* Add padding on the top and bottom as 10px, left and right as 30px */
+
+}
+
+#home p {
+    font-size: 15px; /* Increase the font size for the paragraph */
+    color: #333; /* Darker color for the text */
+    text-align: justify; /* Justify text for clean alignment */
+    padding: 2px 60px; /* Add padding on the top and bottom as 10px, left and right as 30px */
+    margin-bottom: 18px; /* Add some space below each paragraph */
+}
+
+
+
+body, html {
+    overflow: auto; /* or overflow-y: scroll; */
+    height: auto; /* Ensure height is set to auto or remove this property */
+}
+
+#icons {
+    text-align: center; /* Center the icons horizontally */
+    margin: 10px 0; /* Add some space above and below the section */
+}
+
+#icons a {
+    margin: 0 20px; /* Adds horizontal spacing between each icon */
+    font-size: 24px; /* Adjust the size of the icons */
+    color: #333; /* Default icon color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+#icons a:hover {
+    color: #6f0303; /* Change color on hover */
+}
+
+.sankey {
+    display: block; /* Make the image a block element to control margins */
+    max-width: 55%; /* Ensure the image scales to 55% of its container's width */
+    height: auto; /* Maintain the aspect ratio */
+    margin: 20px auto; /* Center the image and add top/bottom margin */
+}
+
+/* Media query for very small screens */
+@media (max-width: 600px) {
+    .sankey {
+        max-width: 90%; /* Increase max-width to make the image larger on small screens */
+    }
+}
+
+/* Media query for large screens */
+@media (min-width: 1200px) {
+    .sankey {
+        max-width: 45%; /* Decrease max-width to make the image smaller on very large screens */
+    }
+}
+
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Space out the project boxes */
+    padding: 20px;
+}
+
+.project-box {
+    background-color: #f6f6f6; /* Light background for the project box */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px;
+    margin: 20px;
+    max-width: 45%; /* Ensure two projects fit side by side on larger screens */
+    flex-grow: 1;
+}
+
+/* Responsive design: Adjusting for smaller screens */
+@media (max-width: 800px) {
+    .project-box {
+        max-width: 100%; /* Allows the box to expand to full width on small screens */
+        margin: 10px; /* Reduce margin for better use of space */
+        padding: 15px; /* Slightly reduce padding */
+    }
+}
+
+
+.project-box h2 {
+    color: #470404; /* Custom color for the heading */
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.project-box p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.project-box ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+}
+
+.project-box ul li {
+    margin-bottom: 10px;
+}
+
+.project-box ul li a {
+    text-decoration: none;
+    color: #470404;
+    font-size: 13px;
+}
+
+.project-box ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.project-image {
+    max-width: 100%; /* Make sure the image scales */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for images */
+    margin-top: 15px;
+}
+
+#teaching {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.teaching-entry {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.teaching-entry h1 {
+    #7b0707;
+}
+
+.teaching-entry h2 {
+    color: #470404;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.teaching-entry p {
+    font-size: 14px;
+    color: #7b0707;
+    line-height: 1.6;
+}
+
+
+
+
+
+
+
