@@ -56,13 +56,13 @@ footer {
     margin: 0;
     z-index: 1000;
     font-size: 12px;
-    color:#ffffff
+    color:#ffffff;
 }
 
 
 .profile-pic {
-    width: 300px;       /* or any size you prefer */
-    height: 300px;      /* must be the same as width to maintain aspect ratio */
+    width: 250px;       /* or any size you prefer */
+    height: 250px;      /* must be the same as width to maintain aspect ratio */
     border-radius: 50%; /* makes the image round */
     border: 3px solid #6e0606; /* optional: adds a white border around the image */
     object-fit: cover;  /* ensures the image covers the area without being distorted */
@@ -114,7 +114,7 @@ em {
 
 #profile h1 {
     color: #470404;
-    font-size: 48px;
+    font-size: 40px;
     margin-bottom: 1%;
 }
 
@@ -129,6 +129,7 @@ em {
     margin-bottom: 10px;
     margin-top: 10px;
     padding: 5px 60px; /* Add padding on the top and bottom as 10px, left and right as 30px */
+    text-align: center;
 
 }
 
@@ -137,7 +138,7 @@ em {
     color: #333; /* Darker color for the text */
     padding: 2px 60px; /* Add padding on the top and bottom as 10px, left and right as 30px */
     margin-bottom: 1%; /* Add some space below each paragraph */
-    text-align: justify;
+    text-align: center;
 }
 
 
@@ -172,12 +173,13 @@ body, html {
 
 .project-box {
     background-color: #ffffff; /* Light background for the project box */
-    border-radius: 15px; /* Rounded corners */
+    border-radius: 5px; /* Rounded corners */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    padding: 30px;
-    margin: 5px;
-    max-width: 51%; /* Ensure two projects fit side by side on larger screens */
-    flex-grow: 1;
+    padding: 25px;
+    margin: 20px;
+    max-width: 50%; /* Ensure two projects fit side by side on larger screens */
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 
 /* Responsive design: Adjusting for smaller screens */
@@ -187,17 +189,23 @@ body, html {
         margin: 10px; /* Reduce margin for better use of space */
         padding: 15px; /* Slightly reduce padding */
     }
+
+    .teaching-entry{
+        max-width: 100%; /* Allows the box to expand to full width on small screens */
+        margin: 10px; /* Reduce margin for better use of space */
+        padding: 15px; /* Slightly reduce padding */
+    }
 }
 
 .project-box h2 {
     color: #470404; /* Custom color for the heading */
-    font-size: 22px;
+    font-size: 18px;
     margin-top: 0px;
     margin-bottom: 10px;
 }
 
 .project-box p {
-    font-size: 16px;
+    font-size: 15px;
     color: #333;
     line-height: 1.6;
     margin-bottom: 15px;
@@ -215,7 +223,7 @@ body, html {
 .project-box ul li a {
     text-decoration: none;
     color: #7b0707;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .project-box ul li a:hover {
@@ -226,24 +234,38 @@ body, html {
     display: block; /* Ensures the image is treated as a block-level element */
     max-width: 70%; /* Make sure the image scales */
     height: auto; /* Maintain aspect ratio */
-    margin-top: 25px;
+    margin-top: 20px;
     margin-left: auto; /* Automatic margin on the left */
     margin-right: auto; /* Automatic margin on the right */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    .project-image {
+        max-width: 100%; /* Allow the image to take up full width on small screens */
+        margin-top: 10px; /* Reduce the top margin on small screens */
+    }
 }
 
 
 #teaching {
     max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
+    margin: 10px auto;
+    padding: 10px;
 }
 
 .teaching-entry {
     background-color: #f9f9f9;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 25px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    margin-bottom: 2%;
+    align-items: center;
+
 }
 
 
@@ -254,8 +276,8 @@ body, html {
 }
 
 .teaching-entry p {
-    font-size: 14px;
-    color: #7b0707;
+    font-size: 15px;
+    color: #333;
     line-height: 1.6;
 }
 
@@ -351,9 +373,5 @@ h2, .date p, .description {
 #home p a:hover {
     text-decoration: underline; /* Underline on hover */
 }
-
-
-
-
 
 
