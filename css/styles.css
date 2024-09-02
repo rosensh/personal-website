@@ -61,8 +61,8 @@ footer {
 
 
 .profile-pic {
-    width: 250px;       /* or any size you prefer */
-    height: 250px;      /* must be the same as width to maintain aspect ratio */
+    width: 300px;       /* or any size you prefer */
+    height: 300px;      /* must be the same as width to maintain aspect ratio */
     border-radius: 50%; /* makes the image round */
     border: 3px solid #6e0606; /* optional: adds a white border around the image */
     object-fit: cover;  /* ensures the image covers the area without being distorted */
