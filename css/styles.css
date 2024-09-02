@@ -8,8 +8,6 @@ body {
     overflow-y: auto; /* Allows vertical scrolling */
     overflow-x: hidden; /* Prevents horizontal scrolling */
     height: 100%; /* Ensures the content can take full height */
-    
-
 }
 
 header {
@@ -27,14 +25,14 @@ nav ul {
 nav ul li {
     display: inline;
     margin-right: 10px;
-    margin-right: 20px; /* Increase margin to space out the items more */
+    margin-right: 10px; /* Increase margin to space out the items more */
 
 }
 
 nav ul li a {
     text-decoration: none;
     color: #333;
-    padding: 200px 30px; /* Add padding to increase the clickable area */
+    padding: 20px 30px; /* Add padding to increase the clickable area */
 
 }
 
@@ -166,34 +164,37 @@ body, html {
 
 #projects {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-around; /* Space out the project boxes */
+    justify-content: center; /* Centers the project boxes vertically */
+    align-items: center; /* Centers the project boxes horizontally */
     padding: 1%;
 }
 
 .project-box {
-    background-color: #ffffff; /* Light background for the project box */
-    border-radius: 5px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 25px;
     margin: 20px;
-    max-width: 50%; /* Ensure two projects fit side by side on larger screens */
-    margin-top: 1%;
-    margin-bottom: 1%;
+    max-width: 500px; /* Limit the max width for consistency */
+    width: 100%; /* Full width within the container */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
 }
 
-/* Responsive design: Adjusting for smaller screens */
-@media (max-width: 800px) {
+/* Adjust for larger screens */
+@media (min-width: 768px) {
     .project-box {
-        max-width: 100%; /* Allows the box to expand to full width on small screens */
-        margin: 10px; /* Reduce margin for better use of space */
-        padding: 15px; /* Slightly reduce padding */
+        max-width: 50%; /* Side-by-side layout on larger screens */
     }
+}
 
-    .teaching-entry{
-        max-width: 100%; /* Allows the box to expand to full width on small screens */
-        margin: 10px; /* Reduce margin for better use of space */
-        padding: 15px; /* Slightly reduce padding */
+/* Adjust for mobile screens */
+@media (max-width: 767px) {
+    .project-box {
+        max-width: 90%; /* Use most of the screen width on smaller devices */
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -245,40 +246,6 @@ body, html {
         max-width: 100%; /* Allow the image to take up full width on small screens */
         margin-top: 10px; /* Reduce the top margin on small screens */
     }
-}
-
-
-#teaching {
-    max-width: 800px;
-    margin: 10px auto;
-    padding: 10px;
-}
-
-.teaching-entry {
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    padding: 25px;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    margin: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 100%;
-    margin-bottom: 2%;
-    align-items: center;
-
-}
-
-
-.teaching-entry h2 {
-    color: #470404;
-    margin-bottom: 10px;
-    font-size: 18px;
-}
-
-.teaching-entry p {
-    font-size: 15px;
-    color: #333;
-    line-height: 1.6;
 }
 
 #recent-news {
